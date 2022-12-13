@@ -58,7 +58,7 @@ button {
 }
 
 form {
-    width: 30rem;
+  width: 30rem;
 }
 
 form h1 {
@@ -93,7 +93,7 @@ form input::placeholder {
   margin-top: 1.6rem;
 }
 
-button {
+form button {
   color: var(--tt-button);
   background-color: var(--bg-button);
   border-radius: 0.4rem;
@@ -111,9 +111,49 @@ button {
   font-weight: bold;
   cursor: pointer;
 
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
-button:hover {
+form button:hover {
   background-color: var(--bg-button-hover);
+}
+
+/* modal  */
+
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  opacity: 0;
+  visibility: hidden;
+
+  display: grid;
+  place-content: center;
+}
+ 
+.modal-wrapper.open {
+  visibility:visible;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: transparent;
+  border: none;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.modal button:hover {
+transform: scale(1.1);
 }
