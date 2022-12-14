@@ -132,9 +132,9 @@ form button:hover {
   display: grid;
   place-content: center;
 }
- 
+
 .modal-wrapper.open {
-  visibility:visible;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -151,9 +151,36 @@ form button:hover {
   right: 1.6rem;
 
   cursor: pointer;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .modal button:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* alert error */
+.alert-error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+  color: var(--tt-error);
+  font-weight: bold;
+
+  background-color: var(--bg-error);
+  padding: 0.8rem 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transform: translateY(-30px);
+  transition: transform .3s;
 }
