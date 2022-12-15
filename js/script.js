@@ -24,6 +24,14 @@ form.onsubmit = function (e) {
     displayResultMessage(result)
 }
 
+inputWeight.addEventListener('input', () => {
+    AlertError.close()
+})
+
+inputHeight.addEventListener('input', () => {
+    AlertError.close()
+})
+
 function displayResultMessage (result) {
     Modal.message.innerText =  `Seu IMC é de ${result}`
     Modal.open()
